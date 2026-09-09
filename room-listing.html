@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room in Acton — Cozy and colourful Mid-Century House</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #EDE5D3;
+    --teal: #1F5C56;
+    --teal-dark: #143F3B;
+    --rust: #C1552C;
+    --mustard: #E8A93A;
+    --ink: #2B231C;
+    --paper: #F7F2E6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Karla',sans-serif;
+    line-height:1.55;
+  }
+  h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;}
+  a{color:inherit;}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px;}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    background:
+      linear-gradient(180deg, rgba(20,63,59,0.72), rgba(20,63,59,0.85)),
+      url('images/avenue_living1.jpeg') center / cover no-repeat;
+    color:var(--paper);
+    overflow:hidden;
+    padding:72px 24px 96px;
+  }
+  .hero .wrap{position:relative;z-index:2;}
+  .arch{
+    position:absolute;
+    bottom:-1px; left:0; right:0;
+    height:56px;
+    background:var(--cream);
+    border-radius:120px 120px 0 0 / 56px 56px 0 0;
+    transform:translateY(1px) scaleX(1.4);
+    z-index:2;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem, 5vw, 3.1rem);
+    font-weight:700;
+    max-width:11ch;
+    line-height:1.08;
+    margin-bottom:18px;
+  }
+  .hero p.lead{
+    max-width:46ch;
+    font-size:1.08rem;
+    color:#DCE9E6;
+  }
+  .price-tag{
+    margin-top:24px;
+    color:var(--mustard);
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:700;
+    font-size:1.35rem;
+  }
+  .hero-cta{
+    margin-top:22px;
+  }
+
+  /* SECTIONS */
+  section.block{padding:56px 0;}
+  section.block .wrap{
+    display:grid;
+    grid-template-columns:140px 1fr;
+    gap:28px;
+  }
+  .label{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:600;
+    font-size:1.4rem;
+    color:var(--rust);
+    align-self:start;
+    position:sticky;
+    top:16px;
+  }
+  ul.points{list-style:none;}
+  ul.points li{
+    position:relative;
+    padding-left:26px;
+    margin-bottom:14px;
+    font-size:1.02rem;
+  }
+  ul.points li::before{
+    content:"";
+    position:absolute;
+    left:0; top:9px;
+    width:10px; height:10px;
+    background:var(--mustard);
+    border-radius:3px;
+    transform:rotate(45deg);
+  }
+  ul.points li strong{color:var(--teal-dark);}
+  ul.points li a{color:var(--rust); text-decoration:underline;}
+
+  .divider{
+    height:2px;
+    background:repeating-linear-gradient(90deg, var(--rust) 0 10px, transparent 10px 20px);
+    max-width:820px;
+    margin:0 auto;
+  }
+
+  /* SECTION PHOTOS */
+  .photo-row-wrap{padding-bottom:52px;}
+  .photo-row{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:10px;
+  }
+  .photo-row img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:14px;
+    display:block;
+  }
+
+  @media (max-width:600px){
+    .photo-row{grid-template-columns:1fr;}
+    .photo-row img{height:200px;}
+  }
+
+  /* CONTACT */
+  .contact{
+    background:var(--teal-dark);
+    color:var(--paper);
+    padding:64px 24px 72px;
+    text-align:center;
+  }
+  .contact h2{font-size:2rem; margin-bottom:14px;}
+  .contact p{max-width:44ch; margin:0 auto 26px; color:#D9E5E2;}
+  .cta{
+    display:inline-block;
+    background:var(--rust);
+    color:var(--paper);
+    padding:14px 32px;
+    border-radius:999px;
+    font-weight:700;
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-size:1.05rem;
+    text-decoration:none;
+  }
+  .fine{
+    margin-top:22px;
+    font-size:0.85rem;
+    color:#9FB6B1;
+  }
+
+  @media (max-width:600px){
+    section.block .wrap{grid-template-columns:1fr;}
+    .label{position:static; margin-bottom:8px;}
+  }
+
+  /* GATE */
+  #gate{
+    position:fixed; inset:0; z-index:999;
+    background:var(--teal-dark);
+    color:var(--paper);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+  }
+  .gate-box{
+    max-width:340px;
+    width:100%;
+    text-align:center;
+  }
+  .gate-box h2{
+    font-size:1.6rem;
+    margin-bottom:10px;
+  }
+  .gate-box p{
+    color:#B9CFCB;
+    margin-bottom:22px;
+    font-size:0.95rem;
+  }
+  .gate-box input{
+    width:100%;
+    padding:12px 16px;
+    border-radius:10px;
+    border:2px solid var(--teal);
+    background:var(--paper);
+    color:var(--ink);
+    font-size:1rem;
+    font-family:'Karla',sans-serif;
+    margin-bottom:12px;
+  }
+  .gate-box input:focus{outline:none; border-color:var(--mustard);}
+  .gate-box button{
+    width:100%;
+    padding:12px 16px;
+    border:none;
+    border-radius:10px;
+    background:var(--rust);
+    color:var(--paper);
+    font-weight:700;
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-size:1rem;
+    cursor:pointer;
+  }
+  .gate-error{
+    color:var(--mustard);
+    font-size:0.88rem;
+    margin-top:10px;
+    min-height:1.2em;
+  }
+  #site-content{display:none;}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="gate-box">
+    <h2>🔒 This listing is private</h2>
+    <p>Enter the password to view details.</p>
+    <form id="gate-form">
+      <input type="password" id="gate-input" placeholder="Password" autocomplete="off">
+      <button type="submit">Unlock</button>
+      <div class="gate-error" id="gate-error"></div>
+    </form>
+  </div>
+</div>
+
+<div id="site-content">
+
+<div class="hero">
+  <div class="wrap">
+    <h1>A room to sublet in Acton, right by the tube</h1>
+    <p class="lead">Cozy, colourful mid-century house — 2 mins from Acton Town station. Own lockable room, cook-friendly kitchen, massive garden, and an espresso machine you're welcome to learn on.</p>
+    <div class="price-tag">£1,200/month, bills included</div>
+    <a class="cta hero-cta" href="https://wa.me/447898842300?text=Hi!%20I'm%20interested%20in%20the%20room%20in%20Acton" target="_blank" rel="noopener">Message Frieda</a>
+  </div>
+  <div class="arch"></div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <div class="label">The room</div>
+    <ul class="points">
+      <li><strong>Small double bed</strong> — snuggly for two, or great solo</li>
+      <li><strong>Lockable</strong> inside and out, so total privacy when you want it</li>
+      <li><strong>Dedicated workspace</strong> plus fast wifi, good for remote work</li>
+    </ul>
+  </div>
+</section>
+
+<div class="wrap photo-row-wrap">
+  <div class="photo-row">
+    <img src="images/avenue_bedroom1.jpeg" alt="Bedroom with double bed and gallery wall of art">
+    <img src="images/avenue_bedroom2.jpeg" alt="Bedroom with clothing rack and art wall">
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<section class="block">
+  <div class="wrap">
+    <div class="label">The flat</div>
+    <ul class="points">
+      <li>You'd be sharing the house with us — <strong>2 bedrooms total</strong></li>
+      <li>We're both professionals — I'm <strong>Frieda</strong>, a <strong>designer in tech</strong>, and my partner's a <strong>barista specialist</strong> (happy to teach you a thing or two on the espresso machine)</li>
+      <li><strong>Free parking</strong> on the premises</li>
+      <li>Fully equipped kitchen — we love to cook</li>
+      <li>Big living room with a <strong>projector</strong> for movie nights</li>
+      <li><strong>Massive garden</strong> to chill in</li>
+    </ul>
+  </div>
+</section>
+
+<div class="wrap photo-row-wrap">
+  <div class="photo-row">
+    <img src="images/avenue_living1.jpeg" alt="Colourful mid-century living room">
+    <img src="images/avenue_living2.jpeg" alt="Living room with projector screen on">
+    <img src="images/avenue_kitchen.jpeg" alt="Kitchen with espresso machine">
+    <img src="images/avenue_bathroom.jpeg" alt="Bathroom with bathtub and shower">
+    <img src="images/avenue_garden1.jpeg" alt="Garden with table, chairs and umbrella">
+    <img src="images/avenue_garden2.jpeg" alt="Garden path with BBQ smoker and seating">
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<section class="block">
+  <div class="wrap">
+    <div class="label">Location</div>
+    <ul class="points">
+      <li><strong>2 mins walk</strong> to <a href="https://www.google.com/maps/search/?api=1&query=Acton+Town+Station" target="_blank" rel="noopener">Acton Town station</a></li>
+      <li>Both <strong>Piccadilly and District lines</strong> — easy runs to Central London, Hammersmith, Heathrow</li>
+      <li><strong>20 mins</strong> to Heathrow</li>
+      <li><strong>30 mins</strong> to Central London</li>
+      <li>Huge Morrisons, 5 mins walk</li>
+      <li>Trendy Churchfield Road, 2 mins walk</li>
+    </ul>
+  </div>
+</section>
+
+<div class="contact">
+  <h2>Keen? Let's chat.</h2>
+  <p class="lead">Available from Mid October to 12th January 2007.</p>
+  <a class="cta" href="https://wa.me/447898842300?text=Hi!%20I'm%20interested%20in%20the%20room%20in%20Acton" target="_blank" rel="noopener">Message Frieda</a>
+</div>
+
+</div>
+
+<script>
+  const PASSWORD = "coffee@acton";
+  const gate = document.getElementById('gate');
+  const content = document.getElementById('site-content');
+  const form = document.getElementById('gate-form');
+  const input = document.getElementById('gate-input');
+  const error = document.getElementById('gate-error');
+
+  function unlock(){
+    gate.style.display = 'none';
+    content.style.display = 'block';
+  }
+
+  if (sessionStorage.getItem('acton-room-unlocked') === 'yes') {
+    unlock();
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (input.value === PASSWORD) {
+      sessionStorage.setItem('acton-room-unlocked', 'yes');
+      unlock();
+    } else {
+      error.textContent = "That's not quite right, try again.";
+      input.value = '';
+      input.focus();
+    }
+  });
+</script>
+
+</body>
+</html>

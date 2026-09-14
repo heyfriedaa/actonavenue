@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Guide by Frieda and Christian</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #EDE5D3;
+    --teal: #1F5C56;
+    --teal-dark: #143F3B;
+    --rust: #C1552C;
+    --mustard: #E8A93A;
+    --ink: #2B231C;
+    --paper: #F7F2E6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Karla',sans-serif;
+    line-height:1.55;
+  }
+  h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;}
+  a{color:inherit;}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px;}
+
+  /* HERO */
+  .hero{
+    background:var(--teal);
+    color:var(--paper);
+    padding:64px 24px 72px;
+    text-align:center;
+  }
+  .hero h1{
+    font-size:clamp(2.5rem, 6vw, 3.5rem);
+    font-weight:700;
+    color:var(--mustard);
+    margin-bottom:16px;
+  }
+  .hero p{
+    max-width:50ch;
+    margin:0 auto;
+    font-size:1.1rem;
+    color:#DCE9E6;
+  }
+
+  /* SECTIONS */
+  section.block{padding:48px 0;}
+  section.block .wrap{
+    max-width:600px;
+  }
+  .section-title{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:600;
+    font-size:1.4rem;
+    color:var(--rust);
+    margin-bottom:8px;
+  }
+  .section-description{
+    font-size:1rem;
+    color:var(--ink);
+    margin-bottom:24px;
+    line-height:1.5;
+  }
+  .category-list{list-style:none;}
+  .category-list li{
+    margin-bottom:24px;
+  }
+  .category-title{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:600;
+    font-size:1.15rem;
+    color:var(--teal-dark);
+    margin-bottom:8px;
+  }
+  .maps-link{
+    display:inline-block;
+    color:var(--rust);
+    text-decoration:underline;
+    font-size:0.95rem;
+  }
+  .maps-link:hover{
+    color:var(--mustard);
+  }
+
+  .divider{
+    height:2px;
+    background:repeating-linear-gradient(90deg, var(--rust) 0 10px, transparent 10px 20px);
+    max-width:820px;
+    margin:0 auto;
+  }
+
+  /* FOOTER */
+  .footer{
+    background:var(--teal-dark);
+    color:var(--paper);
+    padding:48px 24px 56px;
+    text-align:center;
+  }
+  .footer h2{
+    font-size:1.8rem;
+    margin-bottom:12px;
+  }
+  .footer p{
+    max-width:44ch;
+    margin:0 auto 20px;
+    color:#D9E5E2;
+  }
+  .whatsapp-link{
+    display:inline-block;
+    background:var(--rust);
+    color:var(--paper);
+    padding:12px 28px;
+    border-radius:999px;
+    font-weight:700;
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-size:1rem;
+    text-decoration:none;
+  }
+  .whatsapp-link:hover{
+    background:var(--mustard);
+  }
+
+  @media (max-width:600px){
+    .hero{padding:48px 20px 56px;}
+    .hero h1{font-size:2.2rem;}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Welcome!</h1>
+    <p>Frieda and Christian are the foodies behind this guide. Christian's also a trained barista, so his coffee recommendations are the real deal - here are their favourite spots for food and drinks around Acton and beyond.</p>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="section-title">Acton area</h2>
+    <p class="section-description">Pubs and places to eat around the house</p>
+    <ul class="category-list">
+      <li>
+        <div class="category-title">🍽️ Food & Coffee</div>
+        →  <a href="https://maps.app.goo.gl/UUW7Ux5z6fSnehoy7" target="_blank" rel="noopener" class="maps-link">https://maps.app.goo.gl/UUW7Ux5z6fSnehoy7</a>
+      </li>
+      <li>
+        <div class="category-title">🍺 Pubs</div>
+        →  <a href="https://maps.app.goo.gl/bvK3YcARZQRYw5LXA" target="_blank" rel="noopener" class="maps-link">https://maps.app.goo.gl/bvK3YcARZQRYw5LXA</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="section-title">Neighbouring area</h2>
+    <p class="section-description">Places to eat and drink around Hammersmith, Ealing and Chiswick</p>
+    <ul class="category-list">
+      <li>
+        <div class="category-title">👩‍🍳 Gastronomy</div>
+        →  <a href="https://maps.app.goo.gl/Axe8CLJR3x2BwT7N6" target="_blank" rel="noopener" class="maps-link">https://maps.app.goo.gl/Axe8CLJR3x2BwT7N6</a>
+      </li>
+      <li>
+        <div class="category-title">☕️ Coffee</div>
+        →  <a href="https://maps.app.goo.gl/XBRwrYeKRHbhS5Kb6" target="_blank" rel="noopener" class="maps-link">https://maps.app.goo.gl/XBRwrYeKRHbhS5Kb6</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="footer">
+  <div class="wrap">
+    <h2>Any questions?</h2>
+    <p>Send us a message or give us a call if you need anything during your stay.</p>
+    <a href="https://wa.me/447898842300?text=Hi!%20I'm%20staying%20at%20your%20Airbnb%20and%20have%20a%20question." target="_blank" rel="noopener" class="whatsapp-link">Message on WhatsApp</a>
+    <p style="margin-top:16px; font-size:0.9rem; color:#9FB6B1;">Or call: <a href="tel:07898842300" style="color:var(--mustard);">07898842300</a></p>
+  </div>
+</div>
+
+</body>
+</html>

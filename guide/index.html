@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Local Guide by Frieda and Christian</title>
+<title>House Guide & Recommendations — Frieda & Christian</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -45,6 +45,50 @@
     margin:0 auto;
     font-size:1.1rem;
     color:#DCE9E6;
+  }
+
+  /* TABS */
+  .tabs-container{
+    background:var(--paper);
+    border-bottom:2px solid var(--rust);
+    position:sticky;
+    top:0;
+    z-index:100;
+  }
+  .tabs{
+    display:flex;
+    justify-content:center;
+    gap:0;
+    max-width:600px;
+    margin:0 auto;
+  }
+  .tab{
+    flex:1;
+    padding:16px 24px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-size:1.1rem;
+    font-weight:600;
+    color:var(--ink);
+    transition:all 0.2s ease;
+    border-bottom:3px solid transparent;
+  }
+  .tab:hover{
+    color:var(--teal);
+  }
+  .tab.active{
+    color:var(--rust);
+    border-bottom-color:var(--rust);
+  }
+
+  /* TAB CONTENT */
+  .tab-content{
+    display:none;
+  }
+  .tab-content.active{
+    display:block;
   }
 
   /* SECTIONS */
@@ -93,6 +137,32 @@
     margin:0 auto;
   }
 
+  /* HOUSE GUIDE SPECIFIC */
+  .guide-section{
+    margin-bottom:32px;
+  }
+  .guide-section h3{
+    font-size:1.2rem;
+    color:var(--teal-dark);
+    margin-bottom:12px;
+  }
+  .guide-section h4{
+    font-size:1.1rem;
+    color:var(--rust);
+    margin-bottom:8px;
+    margin-top:16px;
+  }
+  .guide-section p{
+    margin-bottom:12px;
+  }
+  .guide-section ul{
+    margin-left:20px;
+    margin-bottom:12px;
+  }
+  .guide-section li{
+    margin-bottom:8px;
+  }
+
   /* FOOTER */
   .footer{
     background:var(--teal-dark);
@@ -127,6 +197,7 @@
   @media (max-width:600px){
     .hero{padding:48px 20px 56px;}
     .hero h1{font-size:2.2rem;}
+    .tab{padding:12px 16px;font-size:1rem;}
   }
 </style>
 </head>
@@ -135,54 +206,162 @@
 <div class="hero">
   <div class="wrap">
     <h1>Welcome!</h1>
-    <p>Frieda and Christian are the foodies behind this guide. Christian's also a trained barista, so his coffee recommendations are the real deal - here are their favourite spots for food and drinks around Acton and beyond.</p>
+    <p>Everything you need for a comfortable stay - from Frieda & Christian</p>
   </div>
 </div>
 
-<section class="block">
-  <div class="wrap">
-    <h2 class="section-title">Acton area</h2>
-    <p class="section-description">Pubs and places to eat around the house</p>
-    <ul class="category-list">
-      <li>
-        <div class="category-title">🍽️ Food & Coffee</div>
-        →  <a href="https://maps.app.goo.gl/UUW7Ux5z6fSnehoy7" target="_blank" rel="noopener" class="maps-link">https://maps.app.goo.gl/UUW7Ux5z6fSnehoy7</a>
-      </li>
-      <li>
-        <div class="category-title">🍺 Pubs</div>
-        →  <a href="https://maps.app.goo.gl/bvK3YcARZQRYw5LXA" target="_blank" rel="noopener" class="maps-link">https://maps.app.goo.gl/bvK3YcARZQRYw5LXA</a>
-      </li>
-    </ul>
+<div class="tabs-container">
+  <div class="tabs">
+    <button class="tab active" data-tab="house-guide">🏠 House guide</button>
+    <button class="tab" data-tab="local-recommendation">🍽️ Recommendations</button>
   </div>
-</section>
+</div>
 
-<div class="divider"></div>
+<!-- HOUSE GUIDE TAB CONTENT -->
+<div id="house-guide" class="tab-content active">
+  <section class="block">
+    <div class="wrap">
+      <div class="guide-section">
+        <h3>📶 WiFi</h3>
+        <p><strong>Network SSID:</strong> NERV</p>
+        <p><strong>Password:</strong> whatpassword?!</p>
+      </div>
 
-<section class="block">
-  <div class="wrap">
-    <h2 class="section-title">Neighbouring area</h2>
-    <p class="section-description">Places to eat and drink around Hammersmith, Ealing and Chiswick</p>
-    <ul class="category-list">
-      <li>
-        <div class="category-title">👩‍🍳 Gastronomy</div>
-        →  <a href="https://maps.app.goo.gl/Axe8CLJR3x2BwT7N6" target="_blank" rel="noopener" class="maps-link">https://maps.app.goo.gl/Axe8CLJR3x2BwT7N6</a>
-      </li>
-      <li>
-        <div class="category-title">☕️ Coffee</div>
-        →  <a href="https://maps.app.goo.gl/XBRwrYeKRHbhS5Kb6" target="_blank" rel="noopener" class="maps-link">https://maps.app.goo.gl/XBRwrYeKRHbhS5Kb6</a>
-      </li>
-    </ul>
-  </div>
-</section>
+      <div class="guide-section">
+        <h3>🔑 Check-in & Check-out</h3>
+        <p><strong>Check-in:</strong> From 3PM onwards</p>
+        <p><strong>Check-out:</strong> By 11AM. Please let us know your check-out time the night before so we can arrange key collection with you.</p>
+        <p><strong>Key instructions:</strong> You should already have all the keys you need - they'll give you access to the front entrance, the flat, and your room.</p>
+      </div>
+
+      <div class="guide-section">
+        <h3>🏠 House Basics</h3>
+        <h4>Bins & Recycling</h4>
+        <ul>
+          <li>The grey bin in the kitchen is for non-recyclable items</li>
+          <li>Compostable waste goes in the small green bin under the sink</li>
+          <li>Recyclables go next to the white cupboard</li>
+        </ul>
+
+        <h4>Washing machine</h4>
+        <p>You'll find this in the kitchen, next to the fridge</p>
+        <p>Laundry detergent is under the sink, behind the right-hand door</p>
+
+        <h4>Parking</h4>
+        <p>If we've arranged parking for you, it's located next to the flat. Please be mindful when parking, as we share the space with our neighbours.</p>
+
+        <h4>Garden Access</h4>
+        <ul>
+          <li>Please make the most of the garden! Keys are in the kitchen, at eye level next to the mugs</li>
+          <li>Smoking/vaping isn't allowed inside the house</li>
+        </ul>
+      </div>
+
+      <div class="guide-section">
+        <h3>🍳 Kitchen</h3>
+        <p>Feel free to use anything in the kitchen. A few things to note:</p>
+
+        <h4>Coffee machine</h4>
+        <ul>
+          <li>We have an espresso machine, which can be a little tricky to use - just ask and we'll show you how</li>
+          <li>Please give it a clean after each use, especially the milk frother, and make sure to dispose of the used beans/grounds properly</li>
+        </ul>
+
+        <h4>Dishwasher</h4>
+        <p>We use the dishwasher as much as possible, so please pop everything in there unless it's one of the hand-wash-only items below:</p>
+        <ul>
+          <li><strong>Hand-wash only:</strong> Pots, pans, air fryer, coffee tools, wooden utensils and kitchen knives</li>
+          <li>Everything else (plates, cutlery, mugs, etc.) can go straight in the dishwasher</li>
+        </ul>
+      </div>
+
+      <div class="guide-section">
+        <h3>🚨 Contact & Emergencies</h3>
+        <p><strong>Frieda:</strong> <a href="tel:07898842300" style="color:var(--mustard);">078 9884 2300</a></p>
+        <p><strong>Christian:</strong> <a href="tel:07759371133" style="color:var(--mustard);">077 5937 1133</a></p>
+        <p><strong>Emergency Services:</strong> 999</p>
+        <p><strong>Nearest pharmacy:</strong> Walker's Pharmacy (4 minutes walk next to Acton Town Station)</p>
+      </div>
+
+      <div class="guide-section">
+        <h3>📍 Local Area</h3>
+        <p><strong>Nearest Tube:</strong> Acton Town Station (District & Piccadilly lines)</p>
+      </div>
+
+      
+    </div>
+  </section>
+</div>
+
+<!-- LOCAL RECOMMENDATION TAB CONTENT -->
+<div id="local-recommendation" class="tab-content">
+  <section class="block">
+    <div class="wrap">
+      <h2 class="section-title">Acton area</h2>
+      <p class="section-description">Pubs and places to eat around the house</p>
+      <ul class="category-list">
+        <li>
+          <div class="category-title">🍽️ Food & Coffee</div>
+          →  <a href="https://maps.app.goo.gl/UUW7Ux5z6fSnehoy7" target="_blank" rel="noopener" class="maps-link">https://maps.app.goo.gl/UUW7Ux5z6fSnehoy7</a>
+        </li>
+        <li>
+          <div class="category-title">🍺 Pubs</div>
+          →  <a href="https://maps.app.goo.gl/bvK3YcARZQRYw5LXA" target="_blank" rel="noopener" class="maps-link">https://maps.app.goo.gl/bvK3YcARZQRYw5LXA</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="block">
+    <div class="wrap">
+      <h2 class="section-title">Neighbouring area</h2>
+      <p class="section-description">Places to eat and drink around Hammersmith, Ealing and Chiswick</p>
+      <ul class="category-list">
+        <li>
+          <div class="category-title">👩‍🍳 Gastronomy</div>
+          →  <a href="https://maps.app.goo.gl/Axe8CLJR3x2BwT7N6" target="_blank" rel="noopener" class="maps-link">https://maps.app.goo.gl/Axe8CLJR3x2BwT7N6</a>
+        </li>
+        <li>
+          <div class="category-title">☕️ Coffee</div>
+          →  <a href="https://maps.app.goo.gl/XBRwrYeKRHbhS5Kb6" target="_blank" rel="noopener" class="maps-link">https://maps.app.goo.gl/XBRwrYeKRHbhS5Kb6</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+
 
 <div class="footer">
   <div class="wrap">
     <h2>Any questions?</h2>
     <p>Send us a message or give us a call if you need anything during your stay.</p>
-    <a href="https://wa.me/447898842300?text=Hi!%20I'm%20staying%20at%20your%20Airbnb%20and%20have%20a%20question." target="_blank" rel="noopener" class="whatsapp-link">Message on WhatsApp</a>
-    <p style="margin-top:16px; font-size:0.9rem; color:#9FB6B1;">Or call: <a href="tel:07898842300" style="color:var(--mustard);">07898842300</a></p>
+    <p style="margin-top:16px; font-size:0.9rem; color:#9FB6B1;">Frieda <a href="tel:07898842300" style="color:var(--mustard);">078 9884 2300</a> <br> or Christian <a href="tel:07759371133" style="color:var(--mustard);">077 5937 1133</a></p>
   </div>
 </div>
+
+<script>
+  // Tab functionality
+  const tabs = document.querySelectorAll('.tab');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Remove active class from all tabs and contents
+      tabs.forEach(t => t.classList.remove('active'));
+      tabContents.forEach(content => content.classList.remove('active'));
+
+      // Add active class to clicked tab
+      tab.classList.add('active');
+
+      // Show corresponding content
+      const tabId = tab.getAttribute('data-tab');
+      document.getElementById(tabId).classList.add('active');
+    });
+  });
+</script>
 
 </body>
 </html>

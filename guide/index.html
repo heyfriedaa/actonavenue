@@ -69,11 +69,21 @@
     border:none;
     cursor:pointer;
     font-family:'Bricolage Grotesque',sans-serif;
-    font-size:1.1rem;
     font-weight:600;
     color:var(--ink);
     transition:all 0.2s ease;
     border-bottom:3px solid transparent;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    line-height:1.2;
+  }
+  .tab span:first-child{
+    font-size:1.5rem;
+  }
+  .tab span:last-child{
+    font-size:0.9rem;
   }
   .tab:hover{
     color:var(--teal);
@@ -197,7 +207,9 @@
   @media (max-width:600px){
     .hero{padding:48px 20px 56px;}
     .hero h1{font-size:2.2rem;}
-    .tab{padding:12px 16px;font-size:1rem;}
+    .tab{padding:12px 16px;}
+    .tab span:first-child{font-size:1.3rem;}
+    .tab span:last-child{font-size:0.85rem;}
   }
 </style>
 </head>
@@ -212,8 +224,14 @@
 
 <div class="tabs-container">
   <div class="tabs">
-    <button class="tab active" data-tab="house-guide">🏠 House guide</button>
-    <button class="tab" data-tab="local-recommendation">🍽️ Recommendations</button>
+    <button class="tab active" data-tab="house-guide">
+      <span>🏠</span>
+      <span>House guide</span>
+    </button>
+    <button class="tab" data-tab="local-recommendation">
+      <span>🍽️</span>
+      <span>Recommendations</span>
+    </button>
   </div>
 </div>
 
